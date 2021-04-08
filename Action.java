@@ -38,39 +38,36 @@ static void inputRecord() {
             throw new Exception();
           }
         }catch(Exception e) {
-          system.out.println("잘못된 입력값입니다. 다시 입력해주세요.")
+          system.out.println("잘못된 입력값입니다. 다시 입력해주세요.");
           System.out.println("정렬기준 선택.(1:이름순 2:총점순 3:메뉴");
         }
       }while(true);
 
-      if(sort==1){
+      if(sort==1)
         Collections.sort(record, new NameAscending());
-        displayRecord;
-      }else if(sort==2){
+      else if(sort==2)
         Collevtions.sort(record, new TotalDescending());
-        displayRecord;       
-      }
-    }else {
-      return;
+      else {
+        return;
     }
+  }
   }
 
 // 출력
   static void outputRecord() {
-  if (count < 1) {
-             System.out.println("정보가 없습니다");
-         }
-         else {
-             // i : 비교할 횟수
-             for(int i = 0; i< count-1; i++) {
+      if(count < 1) {
+        System.out.println("정보가 없습니다");
+      }else{
+        // i : 비교할 횟수
+        for(int i = 0; i< count-1; i++) {
                
-  for (int i = 0; i < count; i++) {
-   System.out.print(grade[i].getName()+"\t");
-   System.out.print(grade[i].getKor()+"\t"); 
-   System.out.print(grade[i].getEng()+"\t");
-   System.out.print(grade[i].getMat()+"\t");
-   System.out.print(grade[i].getTotal()+"\t");
-   System.out.println(grade[i].getAvg());
+      for (int i = 0; i < count; i++) {
+        System.out.print(grade[i].getName()+"\t");
+        System.out.print(grade[i].getKor()+"\t"); 
+        System.out.print(grade[i].getEng()+"\t");
+        System.out.print(grade[i].getMat()+"\t");
+        System.out.print(grade[i].getTotal()+"\t");
+        System.out.println(grade[i].getAvg());
   }
   }
  }
@@ -130,7 +127,7 @@ public void edit(int count) {
                   Editname editname = (Editname)record.get(i);
                   if(input.equals(editname.editName)) {
                     found = true;
-                    record.remove()
+                    record.remove();
                     break;
                   }
                 }
