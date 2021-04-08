@@ -124,8 +124,7 @@ public void edit(int count) {
                 int length = record.size();
                 boolean found = false;
                 for(int i=0; i < length; i++) {
-                  Editname editname = (Editname)record.get(i);
-                  if(input.equals(editname.editName)) {
+
                     found = true;
                     record.remove();
                     break;
