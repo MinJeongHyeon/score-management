@@ -11,6 +11,26 @@ public class Action {
     }
   }
 
+// 출력
+  static void outputRecord() {
+  if (count < 1) {
+             System.out.println("정보가 없습니다");
+         }
+         else {
+             // i : 비교할 횟수
+             for(int i = 0; i< count-1; i++) {
+               
+  for (int i = 0; i < count; i++) {
+   System.out.print(grade[i].getName()+"\t");
+   System.out.print(grade[i].getKor()+"\t"); 
+   System.out.print(grade[i].getEng()+"\t");
+   System.out.print(grade[i].getMat()+"\t");
+   System.out.print(grade[i].getTotal()+"\t");
+   System.out.println(grade[i].getAvg());
+  }
+  }
+ }
+  }
 public void edit(int count) {
     if (count < 1) {
       System.out.println("정보가 없습니다");
