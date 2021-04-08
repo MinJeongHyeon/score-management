@@ -10,6 +10,39 @@ public class Action {
       grade[i] = new Grade();
     }
   }
+// 데이터 정렬
+  static void sortRecord() {
+    while(true) {
+      System.out.println("정렬기준 선택.(1:이름순 2:총점순 3:메뉴");
+      
+      int sort = 0;
+
+      do{
+        try{
+          sort = new Scanner(System.in).nextlnt();
+
+          if(sort >= 1 && sort <= 3) {
+            break;
+          }else {
+            throw new Exception();
+          }
+        }catch(Exception e) {
+          system.out.println("잘못된 입력값입니다. 다시 입력해주세요.")
+          System.out.println("정렬기준 선택.(1:이름순 2:총점순 3:메뉴");
+        }
+      }while(true);
+
+      if(sort==1){
+        Collections.sort(record, new NameAscending());
+        displayRecord;
+      }else if(sort==2){
+        Collevtions.sort(record, new TotalDescending());
+        displayRecord;       
+      }
+    }else {
+      return;
+    }
+  }
 
 // 출력
   static void outputRecord() {
