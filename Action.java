@@ -10,6 +10,17 @@ public class Action {
       grade[i] = new Grade();
     }
   }
+static void inputRecord() {
+    System.out.println("이름을 입력하세요");
+    grade[count].setName(sc.next());
+    System.out.println("국어 점수를 입력하세요");
+    grade[count].setKor(sc.nextInt());
+    System.out.println("영어 점수를 입력하세요");
+    grade[count].setEng(sc.nextInt());
+    System.out.println("수학 점수를 입력하세요");
+    grade[count].setMath(sc.nextInt());
+  }
+
 // 데이터 정렬
   static void sortRecord() {
     while(true) {
