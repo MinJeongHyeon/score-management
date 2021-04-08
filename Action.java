@@ -48,6 +48,43 @@ public void edit(int count) {
       }
     }
   }
+ //데이터 제거 메서드
+    static void deleteRecord() {
+        while(true) {
+          displayRecord();
+          System.out.println("삭제하고싶은 데이터를 입력하세요.");
 
+          do {
+            try {
+              Scanner s = new Scanner(System.in);
+              String input = s.nextLine().trim();
+
+              if(!input.equalslgnoreCase("exit")) {
+                int length = record.size();
+                boolean found = false;
+                for(int i=0; i < length; i++) {
+                  Editname editname = (Editname)record.get(i);
+                  if(input.equals(editname.editName)) {
+                    found = true;
+                    record.remove()
+                    break;
+                  }
+                }
+                if(found) {
+                  System.out.println("삭제완료");
+                } else {
+                  System.out.println("동일한 정보가 없습니다.");
+                }
+                break;
+              } else {
+                return;
+              } catch(exception e) {
+                System.out.println("다시 입력해주세요.");
+                break;
+              }
+            } while(true);
+          }            
+        }                              
+  }
 
 }
